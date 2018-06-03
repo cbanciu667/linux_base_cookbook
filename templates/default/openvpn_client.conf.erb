@@ -1,0 +1,16 @@
+client
+dev tun
+proto <%= @peer['proto'] %>
+remote <%= @peer['remote_host']%> <%= @peer['remote_port']%>
+resolv-retry infinite
+nobind
+persist-key
+persist-tun
+ca peers/<%= @peer['id'] %>/ca.crt
+cert peers/<%= @peer['id'] %>/client.crt
+key peers/<%= @peer['id'] %>/client.key
+comp-lzo
+verb 3
+cipher AES-256-CBC
+auth SHA256
+tls-auth ta.key 1
