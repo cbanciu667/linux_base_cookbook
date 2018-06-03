@@ -1,4 +1,4 @@
-# Cookbook:: linux_base_cookbook
+# Cookbook:: cos_linux_base
 # Recipe:: debian_services_config
 #
 # Copyright:: 2018, Cosmin Banciu, All Rights Reserved.
@@ -24,6 +24,26 @@ template '/etc/squid/squid.conf' do
   notifies :restart, 'service[squid]', :delayed
 end
 service 'squid'
+
+# samba section
+directory '/mnt/data' do
+  owner 'root'
+  group 'root'
+  mode '0755'
+  action :create
+end
+
+template '/etc/samba/smb.conf' do
+  source 'smb.conf.erb'
+  action :create_if_missing
+  owner 'root'
+  group 'root'
+  mode '0644'
+  notifies :restart, 'service[smbd]', :delayed
+  notifies :restart, 'service[nmbd]', :delayed
+end
+service 'smbd'
+service 'nmbd'
 
 # logrotate section
 logrotate_app 'chef-client-log' do
