@@ -1,5 +1,5 @@
 
-name 'cos_linux_base'
+name 'linux_base_cookbook'
 maintainer          'Cosmin Banciu'
 maintainer_email    'cosmin.banciu667@gmail.com'
 license             'Apache 2.0'
@@ -11,13 +11,13 @@ version '0.2.4'
 # tracked.  A `View Issues` link will be displayed on this cookbook's page when
 # uploaded to a Supermarket.
 #
-# issues_url 'https://github.com/<insert_org_here>/cos_linux_base/issues'
+# issues_url 'https://github.com/<insert_org_here>/linux_base_cookbook/issues'
 
 # The `source_url` points to the development repository for this cookbook.  A
 # `View Source` link will be displayed on this cookbook's page when uploaded to
 # a Supermarket.
 #
-# source_url 'https://github.com/<insert_org_here>/cos_linux_base'
+# source_url 'https://github.com/<insert_org_here>/linux_base_cookbook'
 
 depends 'apt'
 depends 'aws'

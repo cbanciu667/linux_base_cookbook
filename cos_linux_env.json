@@ -5,7 +5,7 @@
     "apt": "= 6.1.4",
     "chef-client": "= 9.0.2",
     "compat_resource": "= 12.19.0",
-    "cos_linux_base": "= 0.2.0",
+    "linux_base_cookbook": "= 0.2.0",
     "cron": "= 5.0.1",
     "dynamic_motd": "= 0.1.5",
     "homebrew": "= 4.2.0",

@@ -1,5 +1,5 @@
 #
-# Cookbook:: cos_linux_base
+# Cookbook:: linux_base_cookbook
 # Recipe:: centos_users
 #
 # Copyright:: 2018, The Authors, All Rights Reserved.

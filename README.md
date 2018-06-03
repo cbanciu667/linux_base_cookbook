@@ -1,4 +1,4 @@
-# cos_linux_base
+# linux_base_cookbook
 
 TODO: Enter the cookbook description here.
 
