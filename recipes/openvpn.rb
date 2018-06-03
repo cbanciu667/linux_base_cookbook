@@ -44,7 +44,7 @@ service 'openvpn' do
 end
 =begin
 # openvpn users
-OPENVPN_USERS_DATABAG = 'myserver_vpn_users'
+OPENVPN_USERS_DATABAG = 'merlindomx_vpn_users'
 
 begin
   search(OPENVPN_USERS_DATABAG, 'enabled:true') do |u|

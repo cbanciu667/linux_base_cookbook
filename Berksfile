@@ -1,6 +1,6 @@
 def cos_cookbook(name, version = '>= 0.0.0', options = {})
   cookbook(name, version, {
-    git: "git@github.com:cbanciu667/#{name}.git"
+    git: "git@github.com:user667/#{name}.git"
    }.merge(options))
 end
 
