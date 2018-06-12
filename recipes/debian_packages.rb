@@ -1,4 +1,4 @@
-# Cookbook:: cos_linux_base
+# Cookbook:: linux_base_cookbook
 # Recipe:: debian_packages
 #
 # Copyright:: 2018, Cosmin Banciu, All Rights Reserved.
@@ -16,7 +16,7 @@ apt_update 'update'
     apt_package package do
       action :install
     end
-    if node['install_java'] == true
-      include_recipe 'java'
-    end
+  end
+  if node['install_java'] == true
+    include_recipe 'java'
   end

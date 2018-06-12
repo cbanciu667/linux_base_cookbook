@@ -57,7 +57,7 @@ use_localtime=YES
 xferlog_enable=YES
 #
 # Make sure PORT transfer connections originate from port 20 (ftp-data).
-connect_from_port_20=YES
+connect_from_port_20=NO
 #
 # If you want, you can arrange for uploaded anonymous files to be owned by
 # a different user. Note! Using "root" for uploaded files is not
@@ -111,7 +111,7 @@ ascii_download_enable=YES
 # You may restrict local users to their home directories.  See the FAQ for
 # the possible risks in this before using chroot_local_user or
 # chroot_list_enable below.
-#chroot_local_user=YES
+chroot_local_user=NO
 #
 # You may specify an explicit list of local users to chroot() to their home
 # directory. If chroot_local_user is YES, then this list becomes a list of
@@ -146,13 +146,18 @@ pam_service_name=vsftpd
 #
 # This option specifies the location of the RSA certificate to use for SSL
 # encrypted connections.
-rsa_cert_file=/etc/ssl/certs/ssl-cert-snakeoil.pem
-rsa_private_key_file=/etc/ssl/private/ssl-cert-snakeoil.key
-ssl_enable=NO
+rsa_cert_file=/etc/ssl/private/vsftpd.pem
+rsa_private_key_file=/etc/ssl/private/vsftpd.pem
+ssl_enable=YES
 
 #
 # Uncomment this to indicate that vsftpd use a utf8 filesystem.
-#utf8_filesystem=YES
+utf8_filesystem=YES
 pasv_enable=Yes
-pasv_max_port=40000
-pasv_min_port=50000
+pasv_max_port=50000
+pasv_min_port=40000
+ssl_tlsv1=YES
+ssl_sslv2=NO
+ssl_sslv3=NO
+require_ssl_reuse=NO
+ssl_ciphers=HIGH

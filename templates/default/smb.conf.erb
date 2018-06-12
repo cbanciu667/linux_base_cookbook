@@ -259,12 +259,12 @@
 ;   write list = root, @lpadmin
 
 [share]
-# add samba user password with: smbpasswd -a SMB_USER
+# add samba user password with: smbpasswd -a cosmin
 comment = Ubuntu fileserver share
-path = /mnt/samba_share/
+path = /mnt/data/
 browsable = yes
 guest ok = yes
 read only = no
-valid users = SMB_USER
+valid users = cosmin
 create mask = 0777
 directory mask = 0777

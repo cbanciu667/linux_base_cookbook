@@ -1,4 +1,4 @@
-# Cookbook:: cos_linux_base
+# Cookbook:: linux_base_cookbook
 # Recipe:: debian_services_config
 #
 # Copyright:: 2018, Cosmin Banciu, All Rights Reserved.
@@ -6,7 +6,6 @@
 # vsftpd section
 template '/etc/vsftpd.conf' do
   source 'vsftpd.conf.erb'
-  action :create_if_missing
   owner 'root'
   group 'root'
   mode '0644'
@@ -17,7 +16,6 @@ service 'vsftpd'
 # squid section
 template '/etc/squid/squid.conf' do
   source 'squid.conf.erb'
-  action :create_if_missing
   owner 'root'
   group 'root'
   mode '0644'
@@ -35,7 +33,6 @@ end
 
 template '/etc/samba/smb.conf' do
   source 'smb.conf.erb'
-  action :create_if_missing
   owner 'root'
   group 'root'
   mode '0644'
@@ -53,7 +50,7 @@ logrotate_app 'chef-client-log' do
   create    '644 root adm'
 end
 logrotate_app 'ssh-failed-log' do
-  path      '/home/user1/failed_ssh_logins.log'
+  path      '/home/user/failed_ssh_logins.log'
   frequency 'weekly'
   rotate    30
   create    '644 root adm'
