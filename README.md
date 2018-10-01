@@ -4,3 +4,9 @@ This cookbook performs a basic linux configuration: users, packages, aws configu
 Work is done for debian/ubuntu. Simple ELK configuration and centos base configuration will follow.
 
 06.2018
+
+--------
+
+usage only for Linux Ubuntu
+
+10.2018
