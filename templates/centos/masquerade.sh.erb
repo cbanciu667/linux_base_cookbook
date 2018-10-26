@@ -1,6 +1,0 @@
-#!/bin/bash
-
-if [ -z "$(/sbin/iptables -t nat -L -n -v | grep 'MASQUERADE')" ] ; then
-	/sbin/iptables -t nat -A POSTROUTING -s <%= node['openvpn']['subnet']%>/<%= node['openvpn']['netmask']%> -o <%= node['openvpn']['config']['dev']%>+ -j MASQUERADE
-	/sbin/iptables -t nat -A POSTROUTING -s <%= node['openvpn']['subnet']%>/<%= node['openvpn']['netmask']%> -o eth0 -j MASQUERADE
-fi

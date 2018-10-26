@@ -1,6 +1,6 @@
 def cos_cookbook(name, version = '>= 0.0.0', options = {})
   cookbook(name, version, {
-    git: "git@github.com:user667/#{name}.git"
+    git: "git@github.com:cbanciu667#{name}.git"
    }.merge(options))
 end
 
@@ -17,15 +17,17 @@ cookbook 'apt'
 cookbook 'aws'
 cookbook 'chef-client'
 cookbook 'cron'
+cookbook 'aws-cloudwatchlogs'
 cookbook 'dynamic_motd'
+cookbook 'htpasswd'
 cookbook 'nfs'
 cookbook 'java'
 cookbook 'logrotate'
 cookbook 'openvpn'
+cos_cookbook 'cos_openvpn'
 cookbook 'openssh'
 cookbook 'poise-python'
 cookbook 'rsync'
 cookbook 'ruby'
-cookbook 'sudo'
 cookbook 'system'
-cookbook 'yum-epel'
+cookbook 'sudo'

@@ -50,7 +50,7 @@ logrotate_app 'chef-client-log' do
   create    '644 root adm'
 end
 logrotate_app 'ssh-failed-log' do
-  path      '/home/user/failed_ssh_logins.log'
+  path      '/home/USER1/failed_ssh_logins.log'
   frequency 'weekly'
   rotate    30
   create    '644 root adm'
